@@ -16,17 +16,11 @@ public class Main {
 		int t = sc.nextInt();
 		sc.nextLine();
 		
-		int[][] p = new int[15][14];
+		// k층 n호 -> k층 n-1호 + k-1층 n호 --> 재귀함수 사용
+		// 0층이면 호수만큼 더해주고
+		// 1호면 1을 더해주면 거주민 수를 알 수 있음
+		
 		int sum = 0;
-		
-		for (int j = 0; j < 14; j++) {
-			p[0][j] = j + 1;
-		}
-		
-		for (int i = 0; i < 15; i++) {
-			p[i][0] = 1;
-		}
-		
 		for (int i = 0; i < t; i++) {
 			int k = sc.nextInt();
 			sc.nextLine();
